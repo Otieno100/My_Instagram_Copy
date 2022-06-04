@@ -4,5 +4,5 @@ from django.urls import re_path,include
 
 urlpatterns = [
     re_path(r'^admin/', admin.site.urls),
-    re_path(r'^insta/',include('insta.urls'))
+    re_path(r'^instagram/',include('instagram.urls'))
 ]
