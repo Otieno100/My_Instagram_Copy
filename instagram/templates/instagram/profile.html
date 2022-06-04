@@ -1,0 +1,38 @@
+{%extends 'instagram/base.html'%}
+{% load bootstrap5 %}
+{% block content %}
+{{block.super}}
+<div class="container">
+
+
+    
+    {% for profile  in profiles %}
+
+
+
+    <div class="row">
+
+        <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+            <h2 class="text-center"> {{ profile.Image }} </h2>
+        </div>
+
+        <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+            <img src="{{profile.immage_image.url}}" class="img-responsive" alt="Image">
+        </div>
+
+    </div>
+
+
+
+    {% empty %}
+    <div class="row">
+        <h2 class="text-center">There No profile Items</h2>
+    </div>
+    {% endfor %}
+
+</div>
+
+
+
+
+{% endblock %}
