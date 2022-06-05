@@ -38,7 +38,7 @@ class comments(models.Model):
         return self.text          
 
 
-class Image(models.Model):
+class Images(models.Model):
     instagram_image = models.ImageField(upload_to = 'image/',default = 'brian')
     image_name = models.CharField(max_length = 60)
     image_caption = models.TextField()
